@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submerged Sanctuary - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#fff8f2",
+              "on-background": "#e3e3ff",
+              "secondary-container": "#002d0b",
+              "error": "#fd6f85",
+              "primary": "#b4b5ff",
+              "surface-dim": "#0b0d1e",
+              "on-primary": "#2f3078",
+              "background": "#0b0d1e",
+              "primary-container": "#a5a6f7",
+              "surface-container-high": "#1a1d3a",
+              "on-primary-fixed-variant": "#3c3d85",
+              "on-secondary": "#004b18",
+              "on-tertiary-container": "#61553f",
+              "error-container": "#8a1632",
+              "outline": "#6f7399",
+              "surface": "#0b0d1e",
+              "on-primary-container": "#24246d",
+              "tertiary-container": "#fbe9cb",
+              "primary-fixed": "#bbbbff",
+              "surface-container-lowest": "#000000",
+              "surface-container-low": "#0f1227",
+              "primary-dim": "#9899e8",
+              "on-secondary-fixed-variant": "#2a6e35",
+              "tertiary-fixed-dim": "#efdec0",
+              "tertiary-dim": "#efdec0",
+              "secondary-fixed": "#b4fdb4",
+              "surface-variant": "#1f2344",
+              "on-secondary-fixed": "#03501b",
+              "on-tertiary-fixed": "#50452f",
+              "on-error-container": "#ff97a3",
+              "on-tertiary": "#6a5d46",
+              "on-surface-variant": "#a5a8d1",
+              "inverse-primary": "#5657a1",
+              "on-primary-fixed": "#1d1d66",
+              "outline-variant": "#414569",
+              "secondary-dim": "#83c986",
+              "on-secondary-container": "#6eb372",
+              "surface-tint": "#b4b5ff",
+              "error-dim": "#c8475d",
+              "surface-container": "#141730",
+              "tertiary-fixed": "#feecce",
+              "inverse-on-surface": "#525468",
+              "inverse-surface": "#fbf8ff",
+              "on-surface": "#e3e3ff",
+              "primary-fixed-dim": "#abacfc",
+              "on-error": "#490013",
+              "on-tertiary-fixed-variant": "#6d614a",
+              "surface-bright": "#24294f",
+              "secondary": "#90d792",
+              "surface-container-highest": "#1f2344",
+              "secondary-fixed-dim": "#a6eea7"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#0b0d1e]/60 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#b4b5ff]" data-icon="bubble_chart">bubble_chart</span>
+<span class="text-lg font-medium text-[#b4b5ff] tracking-[0.2em] uppercase">Submerged Sanctuary</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] font-medium tracking-tight text-[#e3e3ff]/70 hover:text-[#b4b5ff] transition-colors duration-300" href="#">Home</a>
+<a class="font-['Manrope'] font-medium tracking-tight text-[#e3e3ff]/70 hover:text-[#b4b5ff] transition-colors duration-300" href="#">Explore</a>
+<a class="font-['Manrope'] font-medium tracking-tight text-[#e3e3ff]/70 hover:text-[#b4b5ff] transition-colors duration-300" href="#">Player</a>
+<a class="font-['Manrope'] font-medium tracking-tight text-[#b4b5ff]" href="#">Profile</a>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto space-y-12">
+<!-- User Avatar & Greeting -->
+<section class="flex flex-col md:flex-row items-center md:items-end gap-8 py-8 animate-fade-in">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+<img alt="User Profile" class="relative w-32 h-32 rounded-full object-cover border-4 border-surface-container-high" data-alt="portrait of a serene young woman with soft lighting and cool blue and purple ambient highlights in a minimalist setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLELe2_yxLu89XgBiIymwUY_dM1nvIXHX_DRHXFkT7MYM-l4y_fElVqTOZm-GhuugsldMu6Bk6EF9MNjbqPVSP-zcPQpxwAua2Qk6pKpqvh7ivGhakN0ZRvD-t_yGNcWFBym3I3xDevRzCWWOsgWLix8PU5iflmZjgee-xRllJVtcIjgv6Ey9XF7paEQ0yjTvbSywP5qAWGc5gR2S7Q2D9LX8ANl5nGxVCIZmjvx_72CrgEqlhdJWpEmi83IW46MCGIuwN9B852Vc"/>
+</div>
+<div class="text-center md:text-left space-y-2">
+<p class="text-primary-dim font-label tracking-widest uppercase text-xs">Deep Breath, Elena</p>
+<h1 class="text-4xl md:text-6xl font-headline font-medium tracking-tight text-on-surface">Your Sanctuary</h1>
+</div>
+</section>
+<!-- Bento Grid Layout for Sections -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Favorites Section (Asymmetric Large Card) -->
+<section class="md:col-span-8 bg-surface-container-low rounded-xl p-8 space-y-6">
+<div class="flex justify-between items-center">
+<h2 class="text-2xl font-headline font-medium">Favorites</h2>
+<span class="material-symbols-outlined text-primary-dim" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-high p-4 rounded-xl flex items-center gap-4 hover:bg-surface-bright transition-colors group cursor-pointer">
+<div class="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+<img alt="Ocean Soundscape" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="abstract close-up of deep blue ocean water with soft white foam and gentle ripples under moonlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf_-i-McnVqKeCJEz_R31e9jUvhN8Brd5tSaqm-lQVKdIJMmsSTmE1B-EPljBLapE6LnrcQ-TNuK0EyTngntkct6XGRt7eon-8ZvqgU6VxyZFqm7n2igPWBr6NjmJtU0fIhOff3rM3UrbKzWUeJYj4IrOfyKNmkUeaDiSPP6BpkbTVRYdOCkY7jPDidHZIBUD6uF2aMmTzvSwJzdUbGelrhXEILxtoQPZF1JKEusga7sodflGid650TuHjWQkgWfbvNX5fCGjbsmU"/>
+</div>
+<div>
+<p class="text-on-surface font-medium">Abyssal Echoes</p>
+<p class="text-on-surface-variant text-sm">Deep Sea Meditation</p>
+</div>
+</div>
+<div class="bg-surface-container-high p-4 rounded-xl flex items-center gap-4 hover:bg-surface-bright transition-colors group cursor-pointer">
+<div class="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+<img alt="Mountain Mist" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="misty mountain peak at dawn with layers of soft purple and blue silhouettes under a hazy sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAztuQKj49cZdXc6Hk76lkjPG2zAUEMjwfO0ffEfoNIcrjLtUpnc1G9V1bR-3tqRWHLoaFsYPRY39RIY2czrQ0T-K3ItWgr2zwv-JuQ8oUWtwYTYndFmRsm4YDsbReO9jfYhIdS5-fkPe7uXcVUMuvW6dGC7HPMLgnDd5rDVwzf-kGaWrvfAgz4taIb8-3rUGcSZfS-TxPArrv30E26XCL-7aAxfkWyKSQbc2CQuFvrW672xA3Jt3DzbHZjbNaQ25WYc0ZXy3WoOaw"/>
+</div>
+<div>
+<p class="text-on-surface font-medium">Weightless Peak</p>
+<p class="text-on-surface-variant text-sm">Breathwork Guide</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Preferences (Small Vertical Card) -->
+<section class="md:col-span-4 bg-surface-container-high rounded-xl p-8 space-y-8">
+<h2 class="text-xl font-headline font-medium">Preferences</h2>
+<div class="space-y-6">
+<!-- Toggle Simulation -->
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Luminescent Mode</span>
+<div class="w-12 h-6 bg-primary-container rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-on-primary-container rounded-full translate-x-6 transition-transform"></div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Pulse Notifications</span>
+<div class="w-12 h-6 bg-outline-variant/30 rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-on-surface/50 rounded-full transition-transform"></div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<label class="text-xs text-primary-dim uppercase tracking-widest font-label block mb-2">Reminder Interval</label>
+<select class="w-full bg-surface-container-lowest border-none text-on-surface rounded-lg py-3 px-4 focus:ring-1 focus:ring-primary-container">
+<option>Every 4 Hours</option>
+<option>Daily at Sunset</option>
+<option>During High Stress</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Account Settings (Full Width Section) -->
+<section class="md:col-span-12 space-y-6">
+<h2 class="text-2xl font-headline font-medium px-2">Sanctuary Access</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-primary-dim" data-icon="fingerprint">fingerprint</span>
+<h3 class="text-lg font-medium">Biometric Lock</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Secure your personal journals and session data with device biometrics.</p>
+<button class="text-primary text-sm font-medium hover:underline">Configure</button>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-primary-dim" data-icon="cloud_done">cloud_done</span>
+<h3 class="text-lg font-medium">Cloud Sync</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Your progress is currently synced across 3 devices. Last update: 2m ago.</p>
+<button class="text-primary text-sm font-medium hover:underline">View Devices</button>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-error-dim" data-icon="distance">distance</span>
+<h3 class="text-lg font-medium">Surface Boundary</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Reset all app data and return to the surface. This action is permanent.</p>
+<button class="text-error-dim text-sm font-medium hover:underline">Purge Data</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Logout Section -->
+<div class="flex justify-center py-12">
+<button class="rounded-full bg-gradient-to-br from-[#b4b5ff] to-[#a5a6f7] text-[#0b0d1e] px-12 py-4 font-headline font-bold text-sm tracking-widest uppercase hover:scale-105 transition-transform duration-500">
+                Ascend &amp; Logout
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end pb-6 px-4 z-50">
+<div class="bg-[#1f2344]/60 backdrop-blur-xl w-full max-w-md mx-auto flex justify-around items-center p-2 rounded-full shadow-[0_-8px_32px_rgba(227,227,255,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/50 p-2 hover:text-[#e3e3ff] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-['Manrope'] text-[10px] tracking-widest uppercase font-medium mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/50 p-2 hover:text-[#e3e3ff] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Manrope'] text-[10px] tracking-widest uppercase font-medium mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/50 p-2 hover:text-[#e3e3ff] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+<span class="font-['Manrope'] text-[10px] tracking-widest uppercase font-medium mt-1">Player</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#b4b5ff] to-[#a5a6f7] text-[#0b0d1e] rounded-full p-3 scale-110 -translate-y-2 transition-all duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="person_2" style="font-variation-settings: 'FILL' 1;">person_2</span>
+<span class="font-['Manrope'] text-[10px] tracking-widest uppercase font-medium mt-1">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

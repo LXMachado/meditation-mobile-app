@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Submerged Sanctuary",
+    "slug": "submerged-sanctuary",
+    "scheme": "submergedsanctuary",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.submergedsanctuary.app",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.submergedsanctuary.app"
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}

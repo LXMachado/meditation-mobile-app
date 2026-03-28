@@ -1,0 +1,48 @@
+export const theme = {
+  colors: {
+    surface: '#0B0D1E',
+    surfaceLow: '#0F1227',
+    surfaceContainer: '#141730',
+    surfaceHigh: '#1A1D3A',
+    surfaceHighest: '#1F2344',
+    surfaceBright: '#24294F',
+    surfaceLowest: '#000000',
+    primary: '#B4B5FF',
+    primaryContainer: '#A5A6F7',
+    primaryDim: '#9899E8',
+    secondary: '#90D792',
+    secondaryDim: '#83C986',
+    secondaryContainer: '#002D0B',
+    tertiary: '#FBE9CB',
+    outline: '#6F7399',
+    outlineVariant: '#414569',
+    text: '#E3E3FF',
+    textMuted: '#A5A8D1',
+    onPrimary: '#2F3078',
+    error: '#FD6F85',
+  },
+  spacing: {
+    xs: 6,
+    sm: 10,
+    md: 16,
+    lg: 20,
+    xl: 24,
+    xxl: 32,
+    xxxl: 40,
+  },
+  radii: {
+    sm: 12,
+    md: 18,
+    lg: 24,
+    pill: 999,
+  },
+  typography: {
+    display: 'Manrope_500Medium',
+    title: 'Manrope_600SemiBold',
+    body: 'Manrope_400Regular',
+    label: 'Manrope_500Medium',
+    strong: 'Manrope_700Bold',
+  },
+} as const;
+
+export type AppTheme = typeof theme;

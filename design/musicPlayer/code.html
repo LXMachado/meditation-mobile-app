@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#fff8f2",
+              "on-background": "#e3e3ff",
+              "secondary-container": "#002d0b",
+              "error": "#fd6f85",
+              "primary": "#b4b5ff",
+              "surface-dim": "#0b0d1e",
+              "on-primary": "#2f3078",
+              "background": "#0b0d1e",
+              "primary-container": "#a5a6f7",
+              "surface-container-high": "#1a1d3a",
+              "on-primary-fixed-variant": "#3c3d85",
+              "on-secondary": "#004b18",
+              "on-tertiary-container": "#61553f",
+              "error-container": "#8a1632",
+              "outline": "#6f7399",
+              "surface": "#0b0d1e",
+              "on-primary-container": "#24246d",
+              "tertiary-container": "#fbe9cb",
+              "primary-fixed": "#bbbbff",
+              "surface-container-lowest": "#000000",
+              "surface-container-low": "#0f1227",
+              "primary-dim": "#9899e8",
+              "on-secondary-fixed-variant": "#2a6e35",
+              "tertiary-fixed-dim": "#efdec0",
+              "tertiary-dim": "#efdec0",
+              "secondary-fixed": "#b4fdb4",
+              "surface-variant": "#1f2344",
+              "on-secondary-fixed": "#03501b",
+              "on-tertiary-fixed": "#50452f",
+              "on-error-container": "#ff97a3",
+              "on-tertiary": "#6a5d46",
+              "on-surface-variant": "#a5a8d1",
+              "inverse-primary": "#5657a1",
+              "on-primary-fixed": "#1d1d66",
+              "outline-variant": "#414569",
+              "secondary-dim": "#83c986",
+              "on-secondary-container": "#6eb372",
+              "surface-tint": "#b4b5ff",
+              "error-dim": "#c8475d",
+              "surface-container": "#141730",
+              "tertiary-fixed": "#feecce",
+              "inverse-on-surface": "#525468",
+              "inverse-surface": "#fbf8ff",
+              "on-surface": "#e3e3ff",
+              "primary-fixed-dim": "#abacfc",
+              "on-error": "#490013",
+              "on-tertiary-fixed-variant": "#6d614a",
+              "surface-bright": "#24294f",
+              "secondary": "#90d792",
+              "surface-container-highest": "#1f2344",
+              "secondary-fixed-dim": "#a6eea7"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-player-gradient {
+            background: radial-gradient(circle at top right, #1f2344 0%, #0b0d1e 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen selection:bg-primary/30">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b0d1e]/60 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#b4b5ff]" data-icon="bubble_chart">bubble_chart</span>
+<span class="text-lg font-medium text-[#b4b5ff] tracking-[0.2em] uppercase">Submerged Sanctuary</span>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined text-on-surface" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</nav>
+<!-- Main Player Canvas -->
+<main class="relative pt-24 pb-32 px-6 flex flex-col items-center justify-center min-h-screen bg-player-gradient overflow-hidden">
+<!-- Background Ambient Elements -->
+<div class="absolute inset-0 z-0 pointer-events-none">
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-secondary/10 rounded-full blur-[100px]"></div>
+</div>
+<!-- Large Calming Artwork -->
+<div class="relative w-full max-w-sm aspect-square mb-12 z-10 group">
+<div class="absolute inset-0 bg-primary/20 rounded-[2.5rem] blur-2xl transform scale-95 group-hover:scale-100 transition-transform duration-700"></div>
+<div class="relative h-full w-full rounded-[2.5rem] overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover transform scale-105" data-alt="ethereal underwater scene with soft shafts of blue light piercing deep indigo water and floating particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9ljCkABPrGsOHWY3Gw6_AqncEuAXgBS1bJhPt2e0sBtp2v6Ymq9QmsfvhRm_afe6PQ1uVzcEk8MZwEVdzvLSIKlfiN_p3HzSx6k7GkxJpXYI6GUdH9fLPnhviamkyW42jfWMCqse2OhaA9oUTiYmrl2IIhbuxE7hhD_uPPIgRDXGegAjJsTl1pOA3w7p1kRJBc07SIIEplb3sJd6lKMI9VfKzEyhawtOLPO9b2P72-dPlWFnUdsQPJt_eR6LTtYYMfaF4ML0Hx4s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/40 to-transparent"></div>
+</div>
+</div>
+<!-- Track Info -->
+<div class="text-center z-10 space-y-2 mb-10">
+<h1 class="text-4xl font-headline font-light tracking-tight text-on-surface">Deep Sleep</h1>
+<p class="text-sm tracking-[0.2em] uppercase text-primary font-medium opacity-80">Binaural Beats</p>
+</div>
+<!-- Player Controls Container -->
+<div class="w-full max-w-md z-10 px-4">
+<!-- Timeline Scrubber -->
+<div class="space-y-4 mb-10">
+<div class="relative w-full h-1.5 bg-surface-variant/40 rounded-full">
+<div class="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-primary to-primary-container rounded-full relative">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-on-background rounded-full shadow-lg border-2 border-primary cursor-pointer"></div>
+</div>
+</div>
+<div class="flex justify-between text-[10px] tracking-widest text-on-surface-variant font-medium">
+<span>12:45</span>
+<span>45:00</span>
+</div>
+</div>
+<!-- Primary Controls -->
+<div class="flex items-center justify-between mb-12">
+<button class="p-3 text-[#e3e3ff]/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="shuffle">shuffle</span>
+</button>
+<div class="flex items-center gap-8">
+<button class="text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl" data-icon="skip_previous">skip_previous</span>
+</button>
+<!-- Breath Orb / Play Button -->
+<button class="w-20 h-20 rounded-full bg-gradient-to-br from-[#b4b5ff] to-[#a5a6f7] flex items-center justify-center text-surface-dim shadow-[0_0_40px_rgba(180,181,255,0.3)] hover:scale-105 transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl" data-icon="pause" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+<button class="text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl" data-icon="skip_next">skip_next</span>
+</button>
+</div>
+<button class="p-3 text-[#e3e3ff]/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="repeat">repeat</span>
+</button>
+</div>
+<!-- Secondary Controls (Glassmorphism row) -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-variant/30 backdrop-blur-md rounded-2xl p-4 flex items-center justify-center gap-3 border border-white/5">
+<span class="material-symbols-outlined text-primary-dim" data-icon="nest_clock_farsight_analog">nest_clock_farsight_analog</span>
+<span class="text-xs font-medium tracking-wide">30 MINS</span>
+</div>
+<div class="bg-surface-variant/30 backdrop-blur-md rounded-2xl p-4 flex items-center justify-center gap-3 border border-white/5">
+<span class="material-symbols-outlined text-secondary-dim" data-icon="graphic_eq">graphic_eq</span>
+<span class="text-xs font-medium tracking-wide">MIX SOUNDS</span>
+</div>
+</div>
+<!-- Volume Scrubber -->
+<div class="mt-10 flex items-center gap-4 px-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="volume_low">volume_down</span>
+<div class="flex-1 h-1 bg-surface-variant/40 rounded-full">
+<div class="h-full w-2/3 bg-on-surface-variant/40 rounded-full"></div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="volume_up">volume_up</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end pb-6 px-4 bg-[#1f2344]/60 backdrop-blur-xl z-50 rounded-t-[1.5rem] shadow-[0_-8px_32px_rgba(227,227,255,0.06)]">
+<div class="flex flex-col items-center justify-center text-[#e3e3ff]/50 p-2 hover:text-[#e3e3ff] transition-all">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-['Manrope'] text-[10px] tracking-widest uppercase font-medium mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#e3e3ff]/50 p-2 hover:text-[#e3e3ff] transition-all">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Manrope'] text-[10px] tracking-widest uppercase font-medium mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#b4b5ff] to-[#a5a6f7] text-[#0b0d1e] rounded-full p-3 scale-110 -translate-y-2 transition-all duration-500">
+<span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="font-['Manrope'] text-[10px] tracking-widest uppercase font-medium">Player</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#e3e3ff]/50 p-2 hover:text-[#e3e3ff] transition-all">
+<span class="material-symbols-outlined" data-icon="person_2">person_2</span>
+<span class="font-['Manrope'] text-[10px] tracking-widest uppercase font-medium mt-1">Profile</span>
+</div>
+</nav>
+
+```</body></html>
