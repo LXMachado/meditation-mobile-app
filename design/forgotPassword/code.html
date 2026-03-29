@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#b4b5ff",
+              "on-secondary-container": "#6eb372",
+              "outline-variant": "#414569",
+              "surface-container-lowest": "#000000",
+              "error": "#fd6f85",
+              "on-primary-fixed": "#1d1d66",
+              "primary-dim": "#9899e8",
+              "surface-variant": "#1f2344",
+              "on-primary": "#2f3078",
+              "on-surface": "#e3e3ff",
+              "on-primary-container": "#24246d",
+              "inverse-on-surface": "#525468",
+              "surface-bright": "#24294f",
+              "tertiary": "#fff8f2",
+              "on-secondary": "#004b18",
+              "surface-dim": "#0b0d1e",
+              "on-surface-variant": "#a5a8d1",
+              "surface-container-high": "#1a1d3a",
+              "primary-fixed-dim": "#abacfc",
+              "on-tertiary": "#6a5d46",
+              "primary-fixed": "#bbbbff",
+              "background": "#0b0d1e",
+              "tertiary-dim": "#efdec0",
+              "tertiary-fixed-dim": "#efdec0",
+              "on-error-container": "#ff97a3",
+              "inverse-surface": "#fbf8ff",
+              "tertiary-fixed": "#feecce",
+              "outline": "#6f7399",
+              "secondary": "#90d792",
+              "on-tertiary-fixed-variant": "#6d614a",
+              "on-secondary-fixed": "#03501b",
+              "surface-container": "#141730",
+              "secondary-dim": "#83c986",
+              "on-background": "#e3e3ff",
+              "inverse-primary": "#5657a1",
+              "on-primary-fixed-variant": "#3c3d85",
+              "secondary-fixed-dim": "#a6eea7",
+              "primary": "#b4b5ff",
+              "error-dim": "#c8475d",
+              "tertiary-container": "#fbe9cb",
+              "error-container": "#8a1632",
+              "secondary-container": "#002d0b",
+              "primary-container": "#a5a6f7",
+              "surface": "#0b0d1e",
+              "surface-container-highest": "#1f2344",
+              "surface-container-low": "#0f1227",
+              "on-tertiary-container": "#61553f",
+              "on-tertiary-fixed": "#50452f",
+              "secondary-fixed": "#b4fdb4",
+              "on-secondary-fixed-variant": "#2a6e35",
+              "on-error": "#490013"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #0b0d1e;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .breath-orb-gradient {
+            background: radial-gradient(circle at center, #90d792 0%, #b4b5ff 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col selection:bg-primary/30">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-transparent">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:opacity-80 transition-opacity duration-300 Active: scale-95 duration-500 ease-in-out text-[#b4b5ff]">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2">
+<h1 class="text-2xl font-medium tracking-widest text-[#b4b5ff] font-['Manrope']">Submerged</h1>
+</div>
+<div class="w-10"></div> <!-- Spacer for symmetry -->
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 pt-20 pb-12 relative overflow-hidden">
+<!-- Background Ambient Element -->
+<div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-1/4 -left-20 w-80 h-80 bg-secondary/5 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="w-full max-w-md space-y-12 relative z-10">
+<!-- Header Section -->
+<div class="space-y-4 text-center md:text-left">
+<h2 class="text-5xl md:text-6xl font-light tracking-tight text-on-surface leading-tight">
+                    Find your <br/>
+<span class="font-medium text-primary">way back</span>
+</h2>
+<p class="text-on-surface-variant text-lg max-w-xs mx-auto md:mx-0 font-light leading-relaxed">
+                    Enter your email to receive a reset link
+                </p>
+</div>
+<!-- Form Section -->
+<form class="space-y-10">
+<div class="space-y-2">
+<label class="block text-xs font-medium tracking-[0.2em] uppercase text-on-surface-variant/80 ml-1">
+                        Email Address
+                    </label>
+<div class="relative group">
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-6 py-5 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary/20 transition-all duration-300 outline-none" placeholder="name@sanctuary.com" type="email"/>
+</div>
+</div>
+<div class="space-y-6 pt-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-semibold py-5 rounded-full transition-all duration-500 hover:opacity-90 active:scale-[0.98] shadow-lg shadow-primary/10" type="submit">
+                        Send Reset Link
+                    </button>
+<div class="flex justify-center">
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors duration-300 flex items-center gap-2 group" href="#">
+                            Return to login
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+</form>
+<!-- Bottom Visual Anchor -->
+<div class="flex justify-center pt-8">
+<div class="breath-orb-gradient w-16 h-16 rounded-full blur-xl opacity-20 animate-pulse"></div>
+</div>
+</div>
+</main>
+<!-- Content Footer / Legal (Optional Context) -->
+<footer class="px-8 pb-12 flex flex-col items-center gap-4">
+<div class="h-[1px] w-12 bg-outline-variant/20"></div>
+<p class="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant/40">
+            Secure Submerged Access
+        </p>
+</footer>
+<!-- Image for Context (Decorative) -->
+<div class="hidden">
+<img alt="Background Texture" data-alt="Smooth gradient flowing from deep navy to soft lavender with subtle grain texture mimicking underwater light rays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2BBEcg4GHhyO3R6iTWMzyF6YulERFcrusoD6V_KCJHGvg4GBpS2VBmw_LbiUi0GY8ub3DgH-YAyhaht4dkVDWUTZ3-TyR9HwABGaxnHtYM40SYo64-y_MviQ9nlJmBZiRM-p0JffkzBmCbi5BpM2Oa9zsgWntALkfTUY5LGbfPq2dMO9pO91mpnjftCy8oARSLFEGtRdGicD9myk8W2JyQFIufG6hxiMWr9du7NyrQrXDdHmBnvs4vXmEAt-oUcHkT1gzuvFOXf0"/>
+</div>
+</body></html>

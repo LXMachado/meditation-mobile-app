@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submerged Sanctuary - Welcome Back</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-tint": "#b4b5ff",
+            "on-secondary-container": "#6eb372",
+            "outline-variant": "#414569",
+            "surface-container-lowest": "#000000",
+            "error": "#fd6f85",
+            "on-primary-fixed": "#1d1d66",
+            "primary-dim": "#9899e8",
+            "surface-variant": "#1f2344",
+            "on-primary": "#2f3078",
+            "on-surface": "#e3e3ff",
+            "on-primary-container": "#24246d",
+            "inverse-on-surface": "#525468",
+            "surface-bright": "#24294f",
+            "tertiary": "#fff8f2",
+            "on-secondary": "#004b18",
+            "surface-dim": "#0b0d1e",
+            "on-surface-variant": "#a5a8d1",
+            "surface-container-high": "#1a1d3a",
+            "primary-fixed-dim": "#abacfc",
+            "on-tertiary": "#6a5d46",
+            "primary-fixed": "#bbbbff",
+            "background": "#0b0d1e",
+            "tertiary-dim": "#efdec0",
+            "tertiary-fixed-dim": "#efdec0",
+            "on-error-container": "#ff97a3",
+            "inverse-surface": "#fbf8ff",
+            "tertiary-fixed": "#feecce",
+            "outline": "#6f7399",
+            "secondary": "#90d792",
+            "on-tertiary-fixed-variant": "#6d614a",
+            "on-secondary-fixed": "#03501b",
+            "surface-container": "#141730",
+            "secondary-dim": "#83c986",
+            "on-background": "#e3e3ff",
+            "inverse-primary": "#5657a1",
+            "on-primary-fixed-variant": "#3c3d85",
+            "secondary-fixed-dim": "#a6eea7",
+            "primary": "#b4b5ff",
+            "error-dim": "#c8475d",
+            "tertiary-container": "#fbe9cb",
+            "error-container": "#8a1632",
+            "secondary-container": "#002d0b",
+            "primary-container": "#a5a6f7",
+            "surface": "#0b0d1e",
+            "surface-container-highest": "#1f2344",
+            "surface-container-low": "#0f1227",
+            "on-tertiary-container": "#61553f",
+            "on-tertiary-fixed": "#50452f",
+            "secondary-fixed": "#b4fdb4",
+            "on-secondary-fixed-variant": "#2a6e35",
+            "on-error": "#490013"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(31, 35, 68, 0.4);
+      backdrop-filter: blur(24px);
+    }
+    .bg-mesh {
+      background: radial-gradient(circle at 20% 30%, rgba(180, 181, 255, 0.08) 0%, transparent 40%),
+                  radial-gradient(circle at 80% 70%, rgba(144, 215, 146, 0.05) 0%, transparent 40%),
+                  #0b0d1e;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-mesh min-h-screen text-on-surface font-body selection:bg-primary/30">
+<!-- Top AppBar (Transactional State: Simplified) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-transparent">
+<div class="text-2xl font-medium tracking-widest text-primary">Submerged</div>
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity duration-300">close</button>
+</header>
+<main class="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-12">
+<!-- Hero Branding Section -->
+<div class="w-full max-w-md text-center mb-10">
+<div class="inline-flex items-center justify-center mb-6 relative">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
+<!-- Signature Component: The Breath Orb (Static for UI) -->
+<div class="relative w-20 h-20 rounded-full bg-gradient-to-tr from-secondary to-primary opacity-90 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-3xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+</div>
+<h1 class="text-4xl md:text-5xl font-medium tracking-tight text-on-surface mb-2 leading-tight">Welcome back to peace</h1>
+<p class="text-on-surface-variant font-light text-sm tracking-wide">Enter your sanctuary to continue your journey.</p>
+</div>
+<!-- Login Form Container -->
+<div class="w-full max-w-md glass-card rounded-[2rem] p-8 shadow-2xl relative overflow-hidden">
+<!-- Form Decor -->
+<div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+<form class="space-y-6 relative z-10">
+<!-- Email Input -->
+<div class="space-y-2">
+<label class="block text-[11px] font-medium tracking-widest uppercase text-on-surface-variant ml-1">Email Address</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-highest/40 border-none rounded-xl px-4 py-4 text-on-surface placeholder:text-outline/50 focus:ring-1 focus:ring-primary/40 transition-all duration-300" placeholder="name@sanctuary.com" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-2">
+<div class="flex justify-between items-end px-1">
+<label class="text-[11px] font-medium tracking-widest uppercase text-on-surface-variant">Password</label>
+<a class="text-[10px] font-medium tracking-widest uppercase text-primary hover:text-primary-container transition-colors" href="#">Forgot password?</a>
+</div>
+<div class="relative group">
+<input class="w-full bg-surface-container-highest/40 border-none rounded-xl px-4 py-4 text-on-surface placeholder:text-outline/50 focus:ring-1 focus:ring-primary/40 transition-all duration-300" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-xl" type="button">visibility_off</button>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-semibold rounded-full shadow-lg shadow-primary/10 hover:opacity-90 active:scale-[0.98] transition-all duration-300 tracking-wide text-sm uppercase" type="submit">
+          Sign In
+        </button>
+</form>
+<!-- Divider -->
+<div class="flex items-center my-8">
+<div class="flex-grow h-[1px] bg-outline-variant/15"></div>
+<span class="mx-4 text-[10px] font-medium tracking-widest uppercase text-outline">or connect with</span>
+<div class="flex-grow h-[1px] bg-outline-variant/15"></div>
+</div>
+<!-- Social Logins -->
+<div class="flex justify-center gap-6 mb-8">
+<button class="w-14 h-14 rounded-full bg-surface-container-high/60 flex items-center justify-center hover:bg-surface-container-highest transition-colors border border-outline-variant/10">
+<img alt="Google" class="w-6 h-6" data-alt="clean geometric google g logo in its original colors on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYjiVi600kb1wB3SxY71mfB9Na0GOEWSToh88z4qIHDhGL8HhVki3ezAUBG2Z-1x0kYfkU4U_Eayn3lY8vvsXhXRri36sarbixQKL8Rqud6pvnDIVwZypvqHBHT9IZ9gD7KtCbLR8TI_MEiT38fB5Fa3rSh8Z8wzNt9hNqIPfw0jIncKVdvPRJmORdynZvUYdNSx5gikQr9oOt7r9fyIXAM1F44Ndfccl16zJKP2XTk0rSmczzagxxoeojasn7bn1GDsXwAvRm9n8"/>
+</button>
+<button class="w-14 h-14 rounded-full bg-surface-container-high/60 flex items-center justify-center hover:bg-surface-container-highest transition-colors border border-outline-variant/10">
+<span class="material-symbols-outlined text-2xl text-on-surface" style="font-variation-settings: 'FILL' 1;">ios</span>
+</button>
+</div>
+<!-- Secondary Links -->
+<div class="text-center space-y-4">
+<p class="text-sm text-on-surface-variant font-light">
+          New to the sanctuary? 
+          <a class="text-primary font-medium hover:underline underline-offset-4 ml-1" href="#">Create Account</a>
+</p>
+<button class="text-[11px] font-medium tracking-widest uppercase text-outline hover:text-on-surface transition-colors">
+          Continue as Guest
+        </button>
+</div>
+</div>
+<!-- Bottom Decorative Image -->
+<div class="mt-16 w-full max-w-2xl overflow-hidden rounded-3xl relative h-48 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="abstract ethereal view of light rays diffusing through deep blue water with floating bioluminescent particles and soft bubbles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGvkaJOHQurgEcwKwEbspf-ODMiopmTY-HUW9YbLa7_x3ndAn0NTh2fy6v0GurI-UMxklc_P1b8W7-hedJVSBUJG7tBd0DB5PPkwKKhBtnb6XOgke8l5YQdprEUlzs1aeBbjc4XgbCWy5iwrvIF3ioxyYtyrmFdUsP-PmD1ZRmYqIDXG_yjNLlpP53XZ8pcUAe7UcyMkDVLi4Vp7Bn0nY-2z7UFvAEpAByVM49soqvxUCR_cYSrGWe0T9iNjHI9h87P8u5Hrv0Cmg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</main>
+<!-- Navigation Suppression Logic: Only active/sign-in related items if any. Since it's a focus page, Nav is hidden. But we use the BottomNavBar styles for the 'Join/Sign In' context if needed. -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-8 pb-8 pt-4 bg-[#1f2344]/60 backdrop-blur-xl rounded-t-[2rem] shadow-[0_-8px_32px_rgba(227,227,255,0.06)] md:hidden">
+<div class="flex flex-col items-center justify-center bg-[#b4b5ff] text-[#0b0d1e] rounded-full px-6 py-2 transition-all duration-500 ease-out">
+<span class="material-symbols-outlined mb-0.5">login</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-widest uppercase">Sign In</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#e3e3ff]/60 px-6 py-2 hover:text-[#e3e3ff] transition-colors duration-300">
+<span class="material-symbols-outlined mb-0.5">person_add</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-widest uppercase">Join</span>
+</div>
+</nav>
+</body></html>

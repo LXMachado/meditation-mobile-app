@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#b4b5ff",
+              "on-secondary-container": "#6eb372",
+              "outline-variant": "#414569",
+              "surface-container-lowest": "#000000",
+              "error": "#fd6f85",
+              "on-primary-fixed": "#1d1d66",
+              "primary-dim": "#9899e8",
+              "surface-variant": "#1f2344",
+              "on-primary": "#2f3078",
+              "on-surface": "#e3e3ff",
+              "on-primary-container": "#24246d",
+              "inverse-on-surface": "#525468",
+              "surface-bright": "#24294f",
+              "tertiary": "#fff8f2",
+              "on-secondary": "#004b18",
+              "surface-dim": "#0b0d1e",
+              "on-surface-variant": "#a5a8d1",
+              "surface-container-high": "#1a1d3a",
+              "primary-fixed-dim": "#abacfc",
+              "on-tertiary": "#6a5d46",
+              "primary-fixed": "#bbbbff",
+              "background": "#0b0d1e",
+              "tertiary-dim": "#efdec0",
+              "tertiary-fixed-dim": "#efdec0",
+              "on-error-container": "#ff97a3",
+              "inverse-surface": "#fbf8ff",
+              "tertiary-fixed": "#feecce",
+              "outline": "#6f7399",
+              "secondary": "#90d792",
+              "on-tertiary-fixed-variant": "#6d614a",
+              "on-secondary-fixed": "#03501b",
+              "surface-container": "#141730",
+              "secondary-dim": "#83c986",
+              "on-background": "#e3e3ff",
+              "inverse-primary": "#5657a1",
+              "on-primary-fixed-variant": "#3c3d85",
+              "secondary-fixed-dim": "#a6eea7",
+              "primary": "#b4b5ff",
+              "error-dim": "#c8475d",
+              "tertiary-container": "#fbe9cb",
+              "error-container": "#8a1632",
+              "secondary-container": "#002d0b",
+              "primary-container": "#a5a6f7",
+              "surface": "#0b0d1e",
+              "surface-container-highest": "#1f2344",
+              "surface-container-low": "#0f1227",
+              "on-tertiary-container": "#61553f",
+              "on-tertiary-fixed": "#50452f",
+              "secondary-fixed": "#b4fdb4",
+              "on-secondary-fixed-variant": "#2a6e35",
+              "on-error": "#490013"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #0b0d1e;
+        }
+        .glass-panel {
+            background: rgba(31, 35, 68, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .breath-gradient {
+            background: radial-gradient(circle, rgba(144, 215, 146, 0.15) 0%, rgba(180, 181, 255, 0.05) 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-transparent">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity duration-300 active:scale-95 duration-500 ease-in-out text-[#b4b5ff]">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+</div>
+<div class="text-2xl font-medium tracking-widest text-[#b4b5ff]">Submerged</div>
+<div class="w-10"></div> <!-- Balance spacer -->
+</header>
+<main class="flex-grow flex items-center justify-center px-6 pt-24 pb-32 relative">
+<!-- Ambient background elements -->
+<div class="absolute top-1/4 -left-20 w-96 h-96 breath-gradient rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+<div class="absolute bottom-1/4 -right-20 w-80 h-80 breath-gradient rounded-full blur-3xl opacity-20 pointer-events-none"></div>
+<section class="w-full max-w-lg space-y-12 relative z-10">
+<!-- Hero Typography -->
+<div class="space-y-4">
+<h1 class="text-5xl font-medium tracking-tight text-on-surface">Begin your journey.</h1>
+<p class="text-on-surface-variant body-md leading-relaxed max-w-sm">
+                    Enter the sanctuary and discover a deeper state of calm through guided immersion.
+                </p>
+</div>
+<!-- Registration Form -->
+<form class="space-y-8">
+<div class="grid grid-cols-1 gap-6">
+<!-- Full Name -->
+<div class="space-y-2">
+<label class="block text-[11px] font-medium tracking-widest uppercase text-on-surface-variant px-1">Full Name</label>
+<input class="w-full h-14 px-6 rounded-xl bg-surface-container-highest border-none text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary-dim transition-all duration-300" placeholder="Alex Rivers" type="text"/>
+</div>
+<!-- Email Address -->
+<div class="space-y-2">
+<label class="block text-[11px] font-medium tracking-widest uppercase text-on-surface-variant px-1">Email Address</label>
+<input class="w-full h-14 px-6 rounded-xl bg-surface-container-highest border-none text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary-dim transition-all duration-300" placeholder="alex@sanctuary.com" type="email"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Password -->
+<div class="space-y-2">
+<label class="block text-[11px] font-medium tracking-widest uppercase text-on-surface-variant px-1">Password</label>
+<input class="w-full h-14 px-6 rounded-xl bg-surface-container-highest border-none text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary-dim transition-all duration-300" placeholder="••••••••" type="password"/>
+</div>
+<!-- Confirm Password -->
+<div class="space-y-2">
+<label class="block text-[11px] font-medium tracking-widest uppercase text-on-surface-variant px-1">Confirm</label>
+<input class="w-full h-14 px-6 rounded-xl bg-surface-container-highest border-none text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary-dim transition-all duration-300" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<!-- Preference Question -->
+<div class="space-y-4 pt-4">
+<label class="block text-sm font-medium text-on-surface tracking-tight">What brings you here today?</label>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2.5 rounded-full bg-secondary text-on-secondary text-sm font-medium transition-transform hover:scale-105 active:scale-95" type="button">Sleep</button>
+<button class="px-5 py-2.5 rounded-full bg-secondary-container text-on-secondary-container text-sm font-medium transition-transform hover:scale-105 active:scale-95" type="button">Focus</button>
+<button class="px-5 py-2.5 rounded-full bg-secondary-container text-on-secondary-container text-sm font-medium transition-transform hover:scale-105 active:scale-95" type="button">Relax</button>
+<button class="px-5 py-2.5 rounded-full bg-secondary-container text-on-secondary-container text-sm font-medium transition-transform hover:scale-105 active:scale-95" type="button">Anxiety Relief</button>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-6">
+<button class="w-full h-16 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-semibold tracking-wide text-lg shadow-xl shadow-primary/10 hover:opacity-90 transition-all duration-500 active:scale-[0.98]">
+                        Create Account
+                    </button>
+</div>
+</form>
+<!-- Bottom Link -->
+<div class="flex justify-center pt-4">
+<p class="text-on-surface-variant text-sm">
+                    Already have an account? 
+                    <a class="text-primary font-medium hover:underline underline-offset-4 ml-1" href="#">Sign In</a>
+</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-8 pb-8 pt-4 bg-[#1f2344]/60 backdrop-blur-xl rounded-t-[2rem] shadow-[0_-8px_32px_rgba(227,227,255,0.06)]">
+<!-- Join is active in the context of creating an account -->
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/60 px-6 py-2 transition-colors duration-300 hover:text-[#e3e3ff]" href="#">
+<span class="material-symbols-outlined mb-1">login</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-widest uppercase">Sign In</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#b4b5ff] text-[#0b0d1e] rounded-full px-8 py-2.5 transition-all duration-500 ease-out scale-100" href="#">
+<span class="material-symbols-outlined mb-1" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person_add</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-widest uppercase">Join</span>
+</a>
+</nav>
+<!-- Decorative Image Card (Editorial Feel) -->
+<div class="fixed right-12 top-1/2 -translate-y-1/2 hidden xl:block w-96 h-[32rem] rounded-[2.5rem] overflow-hidden shadow-2xl rotate-3 bg-surface-container-high border-outline-variant/10 border">
+<img alt="Deep ocean meditation" class="w-full h-full object-cover opacity-60" data-alt="Dreamy abstract visualization of deep blue water with soft rays of light filtering through the surface and gentle floating particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0MPDCNUV-lbAVYwFWqZSwOeOxSE3JITE0RWeed11-osub4MxLQpQF1C5frq6rFRlgO3VaqFU3801AUJ0HfreHrc252iSV2dH4vpdMupsF3zxgw1ZnegXBduTXPZrVuihKuY5KRmqbh9p43Zo6SagYphFTK3gzbeuREhEQbtdmL6cNBzwBJBg3KleuyT_URvyaBE0ceSUE5jiSaSP6JXlb9f-6NX0ySm8mCKhVgOLgNZ5AqcElm1NZbUgHCkBallpeVCpqRGlRfes"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10 right-10">
+<h3 class="text-2xl font-medium leading-tight">Find your center in the depths.</h3>
+<p class="text-on-surface-variant text-sm mt-2">Join 2M+ others on their path to clarity.</p>
+</div>
+</div>
+</body></html>
