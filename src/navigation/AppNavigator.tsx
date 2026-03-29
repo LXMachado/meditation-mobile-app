@@ -1,20 +1,27 @@
 import React from 'react';
+import { ActivityIndicator, View } from 'react-native';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { BlurView } from 'expo-blur';
 import { Ionicons } from '@expo/vector-icons';
 
+import { AuthSuccessScreen } from '@/screens/AuthSuccessScreen';
+import { ForgotPasswordScreen } from '@/screens/ForgotPasswordScreen';
 import { HomeScreen } from '@/screens/HomeScreen';
 import { ExploreScreen } from '@/screens/ExploreScreen';
 import { PlayerScreen } from '@/screens/PlayerScreen';
 import { ProfileScreen } from '@/screens/ProfileScreen';
 import { SessionScreen } from '@/screens/SessionScreen';
+import { SignInScreen } from '@/screens/SignInScreen';
+import { SignUpScreen } from '@/screens/SignUpScreen';
+import { useAuthSession } from '@/hooks/useAuthSession';
 import { useAppStore } from '@/store/useAppStore';
 import { theme } from '@/theme/theme';
-import type { RootStackParamList, TabParamList } from '@/navigation/types';
+import type { AuthStackParamList, RootStackParamList, TabParamList } from '@/navigation/types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+const AuthStack = createNativeStackNavigator<AuthStackParamList>();
 const Tab = createBottomTabNavigator<TabParamList>();
 
 function Tabs() {
@@ -61,8 +68,35 @@ function Tabs() {
   );
 }
 
+function AuthNavigator() {
+  return (
+    <AuthStack.Navigator initialRouteName="SignIn" screenOptions={{ headerShown: false }}>
+      <AuthStack.Screen name="SignIn" component={SignInScreen} />
+      <AuthStack.Screen name="SignUp" component={SignUpScreen} />
+      <AuthStack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+      <AuthStack.Screen name="AuthSuccess" component={AuthSuccessScreen} />
+    </AuthStack.Navigator>
+  );
+}
+
 export function AppNavigator() {
   const themeMode = useAppStore((state) => state.themeMode);
+  const { isHydrated, status } = useAuthSession();
+
+  if (!isHydrated) {
+    return (
+      <View
+        style={{
+          alignItems: 'center',
+          backgroundColor: theme.colors.surface,
+          flex: 1,
+          justifyContent: 'center',
+        }}
+      >
+        <ActivityIndicator color={theme.colors.primary} size="large" />
+      </View>
+    );
+  }
 
   return (
     <NavigationContainer
@@ -79,12 +113,18 @@ export function AppNavigator() {
       }}
     >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Tabs" component={Tabs} />
-        <Stack.Screen
-          name="Session"
-          component={SessionScreen}
-          options={{ animation: 'fade_from_bottom' }}
-        />
+        {status === 'anonymous' ? (
+          <Stack.Screen name="Auth" component={AuthNavigator} />
+        ) : (
+          <>
+            <Stack.Screen name="Tabs" component={Tabs} />
+            <Stack.Screen
+              name="Session"
+              component={SessionScreen}
+              options={{ animation: 'fade_from_bottom' }}
+            />
+          </>
+        )}
       </Stack.Navigator>
     </NavigationContainer>
   );

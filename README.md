@@ -13,6 +13,9 @@ Production-ready Expo + TypeScript scaffold for a meditation and relaxation app 
 
 ## Features
 
+- Auth flow with sign in, sign up, forgot password, guest entry, and reusable success state
+- React Hook Form + Zod validation for auth forms
+- Persisted local auth session with Zustand + AsyncStorage
 - Home, Explore, Player, Session, and Profile screens
 - Featured tracks, categories, favorites, and continue listening
 - Centralized audio service with:
@@ -45,13 +48,14 @@ npm run android
 
 ```text
 src/
+  schemas/      Zod form schemas
   components/   Reusable UI pieces
   data/         Local mock tracks and session data
   hooks/        App-facing hooks
   navigation/   Stack + tab navigation
   screens/      Screen-level UI
   services/     Centralized audio engine
-  store/        Zustand global state
+  store/        Zustand global state and auth session
   theme/        Design tokens
   types/        Shared TypeScript types
   utils/        Formatting and helpers
@@ -61,6 +65,7 @@ src/
 
 - Audio URLs and artwork are mock remote assets for development.
 - `app.json` includes iOS background audio support.
+- Auth is mocked today but isolated in `src/services/authService.ts` and `src/store/useAuthStore.ts` for backend replacement later.
 - The current implementation defaults to the dark visual system from the supplied designs, with a persisted theme preference ready for further expansion if a broader light palette is required.
 
 ## Validation

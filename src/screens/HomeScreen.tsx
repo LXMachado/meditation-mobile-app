@@ -11,6 +11,7 @@ import { Screen } from '@/components/Screen';
 import { SectionHeader } from '@/components/SectionHeader';
 import { TrackCard } from '@/components/TrackCard';
 import { useAudioPlayer } from '@/hooks/useAudioPlayer';
+import { useAuthSession } from '@/hooks/useAuthSession';
 import { useAppStore } from '@/store/useAppStore';
 import { theme } from '@/theme/theme';
 import { formatDuration } from '@/utils/format';
@@ -20,11 +21,11 @@ import type { RootStackParamList } from '@/navigation/types';
 export function HomeScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const { playTrack } = useAudioPlayer();
+  const { displayName } = useAuthSession();
   const favorites = useAppStore((state) => state.favorites);
   const recentlyPlayed = useAppStore((state) => state.recentlyPlayed);
   const playbackPosition = useAppStore((state) => state.playbackPosition);
   const currentTrackId = useAppStore((state) => state.currentTrackId);
-  const displayName = useAppStore((state) => state.profile.displayName);
   const toggleFavorite = useAppStore((state) => state.toggleFavorite);
 
   const featuredTrack = tracks.find((track) => track.featured) ?? tracks[0];

@@ -6,17 +6,20 @@ import { SectionHeader } from '@/components/SectionHeader';
 import { ToggleRow } from '@/components/ToggleRow';
 import { TrackCard } from '@/components/TrackCard';
 import { tracks } from '@/data/tracks';
+import { useAuthSession } from '@/hooks/useAuthSession';
 import { useAppStore } from '@/store/useAppStore';
+import { useAuthStore } from '@/store/useAuthStore';
 import { theme } from '@/theme/theme';
 
 export function ProfileScreen() {
+  const { avatarUrl, displayName, isGuest } = useAuthSession();
   const favorites = useAppStore((state) => state.favorites);
   const themeMode = useAppStore((state) => state.themeMode);
   const notificationsEnabled = useAppStore((state) => state.notificationsEnabled);
-  const profile = useAppStore((state) => state.profile);
   const toggleFavorite = useAppStore((state) => state.toggleFavorite);
   const setThemeMode = useAppStore((state) => state.setThemeMode);
   const setNotificationsEnabled = useAppStore((state) => state.setNotificationsEnabled);
+  const signOut = useAuthStore((state) => state.signOut);
 
   const favoriteTracks = tracks.filter((track) => favorites.includes(track.id));
 
@@ -24,11 +27,11 @@ export function ProfileScreen() {
     <Screen>
       <View style={styles.profileHeader}>
         <Image
-          source={{ uri: profile.avatarUrl }}
+          source={{ uri: avatarUrl }}
           style={styles.avatar}
         />
         <View style={styles.profileText}>
-          <Text style={styles.eyebrow}>Deep breath, {profile.displayName}</Text>
+          <Text style={styles.eyebrow}>Deep breath, {displayName}</Text>
           <Text style={styles.title}>Your Sanctuary</Text>
         </View>
       </View>
@@ -75,8 +78,8 @@ export function ProfileScreen() {
         </View>
       </View>
 
-      <Pressable style={styles.logout}>
-        <Text style={styles.logoutLabel}>Ascend & log out</Text>
+      <Pressable onPress={() => signOut()} style={styles.logout}>
+        <Text style={styles.logoutLabel}>{isGuest ? 'Enter account flow' : 'Ascend & log out'}</Text>
       </Pressable>
     </Screen>
   );
