@@ -13,7 +13,7 @@ type AuthShellProps = PropsWithChildren<{
   onBack?: () => void;
   showClose?: boolean;
   footerImage?: boolean;
-};
+}>;
 
 export function AuthShell({
   title,
