@@ -13,7 +13,7 @@ type ScreenProps = PropsWithChildren<{
 
 export function Screen({ children, scrollable = true, padded = true }: ScreenProps) {
   const themeMode = useAppStore((state) => state.themeMode);
-  const colors =
+  const colors: readonly [string, string, ...string[]] =
     themeMode === 'dark'
       ? [theme.colors.surface, '#11162C', theme.colors.surface]
       : ['#F3F4FF', '#E7EBFF', '#F9FAFF'];
