@@ -22,9 +22,9 @@ export const signUpSchema = z
     email: emailSchema,
     password: passwordSchema,
     confirmPassword: z.string().min(1, 'Confirm your password.'),
-    acceptTerms: z.literal(true, {
-      errorMap: () => ({ message: 'Please accept the terms to continue.' }),
-    }),
+    acceptTerms: z
+      .boolean()
+      .refine((value) => value, 'Please accept the terms to continue.'),
   })
   .refine((values) => values.password === values.confirmPassword, {
     message: 'Passwords do not match.',
