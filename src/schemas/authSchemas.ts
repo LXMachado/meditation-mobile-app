@@ -22,9 +22,11 @@ export const signUpSchema = z
     email: emailSchema,
     password: passwordSchema,
     confirmPassword: z.string().min(1, 'Confirm your password.'),
+<<<<<<< HEAD
     acceptTerms: z
       .boolean()
       .refine((value) => value, 'Please accept the terms to continue.'),
+>>>>>>> a23bb03 (chore(deps): update expo and react native dependencies)
   })
   .refine((values) => values.password === values.confirmPassword, {
     message: 'Passwords do not match.',

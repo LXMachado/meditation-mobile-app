@@ -11,6 +11,8 @@ type ScreenProps = PropsWithChildren<{
   padded?: boolean;
 }>;
 
+type GradientColors = readonly [string, string, ...string[]];
+
 export function Screen({ children, scrollable = true, padded = true }: ScreenProps) {
   const themeMode = useAppStore((state) => state.themeMode);
   const colors: readonly [string, string, ...string[]] =
